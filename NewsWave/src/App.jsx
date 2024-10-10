@@ -16,7 +16,7 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="/home" element={<Home />}>
+        <Route path="/" element={<Home />}>
           <Route path="search" element={<SearchBar />} />
           <Route path="trending" element={<TrendingNews />} />
           <Route path="random" element={<RandomNews />} />
