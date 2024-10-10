@@ -5,20 +5,27 @@ import NavBar from "./Components/NavBar";
 import PageNotFound from "./Components/PageNotFound";
 import PersonalInfo from "./Components/PersonalInfo";
 import Publishers from "./Components/Publishers";
+import TrendingNews from './Components/TrendingNews';
+import SearchBar from './Components/SearchBar';
+import RandomNews from './Components/RandomNews';
+import { Routes, Route, Link } from "react-router-dom";
 
-import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/publishers" element={<Publishers/>} />
-          <Route path="/personalinfo" element={<PersonalInfo/>} />
-          <Route path="*" element={<PageNotFound/>} />
+        <Route path="/home" element={<Home />}>
+          <Route path="search" element={<SearchBar />} />
+          <Route path="trending" element={<TrendingNews />} />
+          <Route path="random" element={<RandomNews />} />
+        </Route>
+        <Route path="/publishers" element={<Publishers />} />
+        <Route path="/personalinfo" element={<PersonalInfo />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

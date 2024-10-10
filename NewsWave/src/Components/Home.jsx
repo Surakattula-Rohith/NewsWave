@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import TrendingNews from './TrendingNews';
+import SearchBar from './SearchBar';
+import RandomNews from './RandomNews';
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa dolor sequi facere, aliquid a nam ducimus dolore quam iusto vitae ex quibusdam dolorum, debitis aut harum sunt dignissimos possimus atque amet. Esse alias voluptatum modi consequuntur! Possimus voluptates quae quibusdam iure ut impedit similique ipsam quisquam facilis asperiores nihil obcaecati nemo, tempore deserunt error tenetur eaque eveniet quidem et, reiciendis nulla! Culpa aspernatur suscipit cumque neque ipsam, corrupti excepturi? Aperiam accusamus temporibus nam ipsa magnam! In nulla assumenda delectus labore ab veniam necessitatibus temporibus eius iure quia eligendi quidem vitae corrupti beatae, possimus voluptates. Doloribus magnam beatae aperiam voluptate aliquid qui possimus voluptas commodi fuga perspiciatis, dolore ea obcaecati deserunt vitae laudantium ipsam a! Accusamus necessitatibus nostrum, officiis rem magni cupiditate voluptate recusandae omnis quibusdam voluptates, dolorem quos dolor dolore. Error, maiores at. Aspernatur beatae quae consectetur sunt in tenetur expedita, accusamus quidem cupiditate iure possimus magni quibusdam veritatis obcaecati labore dolore dignissimos, quas rem quo, dolorem explicabo voluptatem repellendus ea perferendis! Optio atque impedit nam maiores ipsum quia voluptas nulla dignissimos dolore, tempora iure repellat vero hic mollitia. Impedit necessitatibus nesciunt sunt, eos ipsum vitae voluptatibus commodi. Voluptatem aspernatur quas alias ab suscipit sint id, illo dolorem necessitatibus ut!</div>
-  )
+    <div>
+      <nav className="bg-gray-700 text-white w-full z-10 p-4 flex justify-between items-center">
+        <Link to="trending" className="bg-green-500 py-2 px-4 rounded hover:bg-green-600 transition">Trending</Link>
+        
+        <Link to="search" className="text-lg font-bold">Search</Link>
+        
+        <Link to="random" className="bg-green-500 py-2 px-4 rounded hover:bg-green-600 transition">Random News</Link>
+      </nav>
+      <div className="h-4"></div>
+      <Outlet />
+    </div>
+  );
 }
 
-export default Home
+export default Home;

@@ -8,7 +8,7 @@ const NavBar = () => {
       <header className="bg-gray-800 text-white fixed top-0 left-0 w-full z-10">
         <nav className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center">
+            <Link to="/home" className="flex items-center">
               <img 
                 src={Logo} 
                 alt="Logo" 
