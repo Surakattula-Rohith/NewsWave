@@ -40,12 +40,12 @@ const SearchResults = ({ query }) => {
 
   return (
     <div className="mt-4">
-      {loading && <p className="text-white">Loading results for: <strong>{query}</strong></p>}
+      {loading && <p className="text-black">Loading results for: <strong>{query}</strong></p>}
       {!loading && results.length === 0 && <p className="text-black">No results found for: <strong>{query}</strong></p>}
 
       {!loading && results.length > 0 && (
         <div>
-          <h2 className="text-xl font-semibold text-white mb-4">Results for: <strong>{query}</strong></h2>
+          <h2 className="text-xl font-semibold text-black mb-4">Results for: <strong>{query}</strong></h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {results.map((result, index) => (
               <NewsCard key={index} result={result} />
